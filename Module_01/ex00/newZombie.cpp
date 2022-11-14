@@ -17,8 +17,6 @@ Zombie	*newZombie(std::string name)
 	Zombie *dead = new(std::nothrow)Zombie(name); // указатель dead станет нулевым, если память не выделится 
 							// (std::nothrow для того, чтобы избежать генерации исключения)
 	if (!dead)
-	{
-		std::cout << "Could not allocate memory!" << std::endl;
-	}
+	    std::cout << "Could not allocate memory!" << std::endl;
 	return (dead);
 }
