@@ -6,7 +6,7 @@
 /*   By: ateak <ateak@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 16:17:20 by ateak             #+#    #+#             */
-/*   Updated: 2022/11/14 21:08:17 by ateak            ###   ########.fr       */
+/*   Updated: 2022/11/15 14:44:26 by ateak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 Weapon::Weapon(const std::string &type)
 {
 	m_type = type;
-	std::cout << m_type << " was born!" << std::endl;
+	//std::cout << m_type << " was born!" << std::endl;
 }
 
 Weapon::~Weapon()
 {
-	std::cout << m_type << " is dead!" << std::endl;
+	//std::cout << m_type << " is dead!" << std::endl;
 }
 
 const std::string &Weapon::getType()
