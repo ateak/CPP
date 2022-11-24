@@ -3,6 +3,8 @@ NAME		=	ChangeText
 SRCS		=	main.cpp\
 				ChangeText.cpp\
 
+HEADER		=	ChangeText.hpp\
+
 OBJS		=	$(SRCS:.cpp=.o)
 
 CC			=	c++
