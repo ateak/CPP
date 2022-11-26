@@ -6,7 +6,7 @@
 /*   By: ateak <ateak@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 16:17:10 by ateak             #+#    #+#             */
-/*   Updated: 2022/11/13 18:11:20 by ateak            ###   ########.fr       */
+/*   Updated: 2022/11/26 16:27:17 by ateak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Zombie* zombieHorde(int N, std::string name)
 	if (!horde)
 		std::cout << "Could not allocate memory!" << std::endl;
 	for (int i = 0; i < N; i++)
-		horde[i].setName(name);
+		horde[i].m_setName(name);
 	return (horde);
 }
 

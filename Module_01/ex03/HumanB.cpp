@@ -6,15 +6,15 @@
 /*   By: ateak <ateak@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 16:17:20 by ateak             #+#    #+#             */
-/*   Updated: 2022/11/15 14:44:02 by ateak            ###   ########.fr       */
+/*   Updated: 2022/11/26 17:13:25 by ateak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "HumanB.hpp"
 
-HumanB::HumanB(const std::string &name) : m_name(name)
+HumanB::HumanB(const std::string &name) : _name(name)
 {
-	m_weapon = NULL;
+	_weapon = NULL;
 	//std::cout << m_name << " was born!" << std::endl;
 }
 
@@ -23,14 +23,14 @@ HumanB::~HumanB()
 	//std::cout << m_name << " is dead!" << std::endl;
 }
 
-void	HumanB::attack()
+void	HumanB::m_attack()
 {
-	if (m_weapon == NULL)
+	if (_weapon == NULL)
 		return ;
-	std::cout << m_name << " attacks with their " << m_weapon->getType() << std::endl;
+	std::cout << _name << " attacks with their " << _weapon->m_getType() << std::endl;
 }
 	
-void	HumanB::setWeapon(Weapon &weapon)
+void	HumanB::m_setWeapon(Weapon &weapon)
 {
-	m_weapon = &weapon;
+	_weapon = &weapon;
 }

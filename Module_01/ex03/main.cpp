@@ -6,7 +6,7 @@
 /*   By: ateak <ateak@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 16:15:36 by ateak             #+#    #+#             */
-/*   Updated: 2022/11/15 14:43:24 by ateak            ###   ########.fr       */
+/*   Updated: 2022/11/26 16:26:19 by ateak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,18 @@ int main()
 	{
 		Weapon  club = Weapon("crude spiked club");
 		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
+		bob.m_attack();
+		club.m_setType("some other type of club");
+		bob.m_attack();
 	}
 	{
 		Weapon  club = Weapon("crude spiked club");
 	
 		HumanB jim("Jim");
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
+		jim.m_setWeapon(club);
+		jim.m_attack();
+		club.m_setType("some other type of club");
+		jim.m_attack();
 	}
 
 	return (0);

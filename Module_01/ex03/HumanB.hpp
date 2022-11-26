@@ -6,7 +6,7 @@
 /*   By: ateak <ateak@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 19:56:05 by ateak             #+#    #+#             */
-/*   Updated: 2022/11/14 20:38:47 by ateak            ###   ########.fr       */
+/*   Updated: 2022/11/26 16:24:02 by ateak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,15 @@
 class HumanB
 {
 private:
-	std::string	m_name;
-	Weapon		*m_weapon; //in other words HumanB may not always have a Weapon because pointer can be equal NULL
+	std::string	_name;
+	Weapon		*_weapon; //in other words HumanB may not always have a Weapon because pointer can be equal NULL
 
 public:
 	HumanB(const std::string &name);
 	~HumanB();
 	
-	void	attack();
-	void	setWeapon(Weapon &weapon);
+	void	m_attack();
+	void	m_setWeapon(Weapon &weapon);
 };
 
 #endif

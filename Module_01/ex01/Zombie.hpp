@@ -6,7 +6,7 @@
 /*   By: ateak <ateak@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 19:56:05 by ateak             #+#    #+#             */
-/*   Updated: 2022/11/13 16:38:11 by ateak            ###   ########.fr       */
+/*   Updated: 2022/11/26 16:26:51 by ateak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@
 class Zombie
 {
 private:
-	std::string m_name;
+	std::string _name;
 
 public:
 	Zombie();
 	Zombie(std::string m_name);
 	~Zombie();
-	void	announce();
-	void	setName(const std::string &m_name);
+	void	m_announce();
+	void	m_setName(const std::string &m_name);
 };
 
 

@@ -6,7 +6,7 @@
 /*   By: ateak <ateak@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 16:15:36 by ateak             #+#    #+#             */
-/*   Updated: 2022/11/13 17:58:49 by ateak            ###   ########.fr       */
+/*   Updated: 2022/11/26 17:07:46 by ateak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ int main(void)
 	randomChump("Evgeniya"); //зомби создается на стеке во внешней функции и умирает сразу после завершения функции
 
 	Zombie stack_zomb(std::string("Alisa")); //зомби создается на стеке в классе и умирает как только завершается вся программа
-	stack_zomb.announce();
+	stack_zomb.m_announce();
 
 	Zombie *heap_zomb = newZombie(std::string("Tanya")); //зомби создается на куче и умирает как только мы вызываем delete
-	heap_zomb->announce();
+	heap_zomb->m_announce();
 	delete heap_zomb;
 }

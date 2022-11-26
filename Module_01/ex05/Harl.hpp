@@ -14,10 +14,10 @@ class Harl
 private:
 	void (Harl::*m_ptrToFunc[4])();
 	std::string m_level[4];
-	void m_debug(void);
-	void m_info(void);
-	void m_warning(void);
-	void m_error(void);
+	void _debug(void);
+	void _info(void);
+	void _warning(void);
+	void _error(void);
 public:
 	void m_complain(std::string level);
 	Harl();

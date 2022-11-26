@@ -6,7 +6,7 @@
 /*   By: ateak <ateak@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 16:15:36 by ateak             #+#    #+#             */
-/*   Updated: 2022/11/13 18:51:28 by ateak            ###   ########.fr       */
+/*   Updated: 2022/11/26 17:10:50 by ateak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ int main(void)
 
 	Zombie *horde = zombieHorde(N, std::string("Bob"));
 	for (int i = 0; i < N; i++)
-		horde[i].announce();
+		horde[i].m_announce();
 	delete[] horde;
 }

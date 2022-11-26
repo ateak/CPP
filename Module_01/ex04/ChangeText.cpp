@@ -6,7 +6,7 @@
 /*   By: ateak <ateak@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 19:15:29 by ateak             #+#    #+#             */
-/*   Updated: 2022/11/23 19:46:26 by ateak            ###   ########.fr       */
+/*   Updated: 2022/11/26 16:23:11 by ateak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 ChangeText::ChangeText(){}
 ChangeText::~ChangeText(){}
 
-int ChangeText::replaceStr(std::string fileName, std::string s1, std::string s2)
+int ChangeText::m_replaceStr(std::string fileName, std::string s1, std::string s2)
 {
 	std::string		bufStr;
 	size_t			searchPos; 

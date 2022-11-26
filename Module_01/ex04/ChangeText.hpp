@@ -6,7 +6,7 @@
 /*   By: ateak <ateak@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 19:15:24 by ateak             #+#    #+#             */
-/*   Updated: 2022/11/23 19:46:58 by ateak            ###   ########.fr       */
+/*   Updated: 2022/11/26 16:22:50 by ateak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ class ChangeText
 public:
 	ChangeText();
 	~ChangeText();
-	int replaceStr(std::string fileName, std::string s1, std::string s2);
+	int	m_replaceStr(std::string fileName, std::string s1, std::string s2);
 };
 
 
