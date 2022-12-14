@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ateak <ateak@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/01 18:18:24 by ateak             #+#    #+#             */
-/*   Updated: 2022/11/26 17:50:20 by ateak            ###   ########.fr       */
+/*   Created: 2022/12/14 17:14:26 by ateak             #+#    #+#             */
+/*   Updated: 2022/12/14 17:29:32 by ateak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <cctype>
-#include <cstring>
+#ifndef FIXED_HPP
+#define FIXED_HPP
+#include "iostream"
 
-int	main(int argc, char *argv[])
+class Fixed
 {
-	if (argc == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	else
-	{
-		for (int count = 1; count < argc; ++count)
-		{
-			for (size_t i = 0; i < strlen(argv[count]); i++) 
-				std::cout << char(toupper(argv[count][i]));
-		}
-		std::cout << std::endl;
-	}
-	return 0;
-}
+private:
+	int	_value;	
+	static const int _nbFractionalBits = 8;
+public:
+	Fixed();
+	Fixed (const Fixed &value);
+	Fixed& operator=(const Fixed &value);
+	~Fixed();
+
+	int getRawBits(void) const;
+	void setRawBits(int const raw);
+};
+
+
+#endif
