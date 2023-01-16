@@ -6,7 +6,7 @@
 /*   By: ateak <ateak@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 16:49:42 by ateak             #+#    #+#             */
-/*   Updated: 2022/12/21 18:23:21 by ateak            ###   ########.fr       */
+/*   Updated: 2023/01/16 13:06:46 by ateak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ ClapTrap::ClapTrap(const ClapTrap &clapTrap)
 }
 ClapTrap &ClapTrap::operator = (const ClapTrap &clapTrap)
 {
-	//	std::cout << "Copy assignment operator called" << std::endl;
+	std::cout << "Copy assignment operator called" << std::endl;
 	if (this == &clapTrap)
 		return *this;
 	_Name = clapTrap.getName();
@@ -41,7 +41,6 @@ ClapTrap::~ClapTrap()
 {
 		std::cout << "Destructor called" << std::endl;
 }
-
 
 void	ClapTrap::setName(const std::string &newName)
 {
@@ -88,19 +87,22 @@ void	ClapTrap::attack(const std::string &target)
 	}
 	else
 		std::cout << "ClapTrap " << getName() << " has no energy or hit points left to do anything." << std::endl;
-	std::cout << getName() << "'s health is " << getHitPoints() << "hit points\n" << "energy is "<< getEnergy() << " points" << std::endl;
+	std::cout << getName() << "'s health is " << getHitPoints() << " hit points\n" << getName() << "'s energy is " << getEnergy() << " points" << std::endl;
 }
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {
-	if (getHitPoints() > 0)
+	if (getHitPoints() > 0 && getEnergy() > 0)
 	{
-		setHitPoints(getHitPoints() - amount);
+		if (getHitPoints() < amount)
+			setHitPoints(0);
+		else
+			setHitPoints(getHitPoints() - amount);
 		std::cout << "ClapTrap " << getName() << " takes " << amount << " points of damage!" << std::endl;
 	}
 	else
 		std::cout << "ClapTrap " << getName() << " has no hit points left" << std::endl;
-	std::cout << getName() << "'s health is " << getHitPoints() << "hit points\n" << "energy is "<< getEnergy() << " points" << std::endl;
+	std::cout << getName() << "'s health is " << getHitPoints() << " hit points\n" << getName() << "'s energy is " << getEnergy() << " points" << std::endl;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)
@@ -113,5 +115,5 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	}
 	else
 		std::cout<< "ClapTrap "<< getName() << " has no energy or HP left to do anything." << std::endl;
-	std::cout << getName() << "'s health is " << getHitPoints() << "hit points\n" << "energy is "<< getEnergy() << " points" << std::endl;
+	std::cout << getName() << "'s health is " << getHitPoints() << " hit points\n" << getName() << "'s energy is "<< getEnergy() << " points" << std::endl;
 }
