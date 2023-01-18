@@ -6,7 +6,7 @@
 /*   By: ateak <ateak@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 16:00:33 by ateak             #+#    #+#             */
-/*   Updated: 2023/01/18 16:07:05 by ateak            ###   ########.fr       */
+/*   Updated: 2023/01/18 18:31:02 by ateak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Cat : public Animal
 public:
 	Cat();
 	Cat(const Cat &copy);
-	~Cat();
+	virtual ~Cat();
 	Cat& operator=(const Cat &value);
 
 	void makeSound() const;
